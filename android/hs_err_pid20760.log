@@ -1,0 +1,219 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 257949696 bytes for G1 virtual space
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Zero Based Compressed Oops mode in which the Java heap is
+#     placed in the first 32GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 32GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3548), pid=20760, tid=15488
+#
+# JRE version:  (17.0.12+8) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (17.0.12+8-LTS-286, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dorg.gradle.appname=gradlew org.gradle.wrapper.GradleWrapperMain -q -Ptarget-platform=android-x64 -Ptarget=C:\version2-2\lib\main.dart -Pbase-application-name=android.app.Application -Pdart-defines=RkxVVFRFUl9WRVJTSU9OPTMuNDEuMQ==,RkxVVFRFUl9DSEFOTkVMPXN0YWJsZQ==,RkxVVFRFUl9HSVRfVVJMPWh0dHBzOi8vZ2l0aHViLmNvbS9mbHV0dGVyL2ZsdXR0ZXIuZ2l0,RkxVVFRFUl9GUkFNRVdPUktfUkVWSVNJT049NTgyYTBlN2M1NQ==,RkxVVFRFUl9FTkdJTkVfUkVWSVNJT049MzQ1MmQ3MzViZA==,RkxVVFRFUl9EQVJUX1ZFUlNJT049My4xMS4w -Pdart-obfuscation=false -Ptrack-widget-creation=true -Ptree-shake-icons=false -Pfilesystem-scheme=org-dartlang-root assembleDebug
+
+Host: AMD Ryzen 5 PRO 4650U with Radeon Graphics, 12 cores, 15G,  Windows 11 , 64 bit Build 26100 (10.0.26100.7920)
+Time: Tue Apr 14 20:54:06 2026 W. Central Africa Standard Time elapsed time: 1.267170 seconds (0d 0h 0m 1s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000016887192920):  JavaThread "Unknown thread" [_thread_in_vm, id=15488, stack(0x00000062f8500000,0x00000062f8600000)]
+
+Stack: [0x00000062f8500000,0x00000062f8600000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x67a04a]
+V  [jvm.dll+0x7da4ed]
+V  [jvm.dll+0x7dbe33]
+V  [jvm.dll+0x7dc4a3]
+V  [jvm.dll+0x24508f]
+V  [jvm.dll+0x677089]
+V  [jvm.dll+0x66bd32]
+V  [jvm.dll+0x301fa6]
+V  [jvm.dll+0x309546]
+V  [jvm.dll+0x359d2e]
+V  [jvm.dll+0x359f5f]
+V  [jvm.dll+0x2d9078]
+V  [jvm.dll+0x2d9fe4]
+V  [jvm.dll+0x7aca21]
+V  [jvm.dll+0x367591]
+V  [jvm.dll+0x78b999]
+V  [jvm.dll+0x3ec83f]
+V  [jvm.dll+0x3ee471]
+C  [jli.dll+0x5297]
+C  [ucrtbase.dll+0x37b0]
+C  [KERNEL32.DLL+0x2e8d7]
+C  [ntdll.dll+0x8c48c]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ffe029e7a18, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x00000168872015d0 GCTaskThread "GC Thread#0" [stack: 0x00000062f8600000,0x00000062f8700000] [id=18804]
+  0x0000016887211880 ConcurrentGCThread "G1 Main Marker" [stack: 0x00000062f8700000,0x00000062f8800000] [id=18220]
+  0x0000016887212d70 ConcurrentGCThread "G1 Conc#0" [stack: 0x00000062f8800000,0x00000062f8900000] [id=6188]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffe02219b67]
+
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x000001688718f410] Heap_lock - owner thread: 0x0000016887192920
+
+Heap address: 0x000000070aa00000, size: 3926 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 1.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+<Empty>
+
+Heap:
+ garbage-first heap   total 0K, used 0K [0x000000070aa00000, 0x0000000800000000)
+  region size 2048K, 0 young (0K), 0 survivors (0K)
+
+[error occurred during error reporting (printing heap information), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffe02603859]
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Events (1 events):
+Event: 0.012 Loaded shared library C:\Program Files\Java\jdk-17\bin\java.dll
+
+
+Dynamic libraries:
+0x00007ff6043b0000 - 0x00007ff6043c0000 	C:\Program Files\Java\jdk-17\bin\java.exe
+0x00007ffe80900000 - 0x00007ffe80b67000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffe7fce0000 - 0x00007ffe7fda9000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffe7dd30000 - 0x00007ffe7e121000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffe7e340000 - 0x00007ffe7e48b000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffe63620000 - 0x00007ffe6363b000 	C:\Program Files\Java\jdk-17\bin\VCRUNTIME140.dll
+0x00007ffe5ecd0000 - 0x00007ffe5ece9000 	C:\Program Files\Java\jdk-17\bin\jli.dll
+0x00007ffe7fc20000 - 0x00007ffe7fcdb000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffe7fe30000 - 0x00007ffe7fed9000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffe7e930000 - 0x00007ffe7e9d7000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffe806b0000 - 0x00007ffe807c8000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffe802a0000 - 0x00007ffe80465000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffe653a0000 - 0x00007ffe65633000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.26100.8037_none_3e092faae333b53b\COMCTL32.dll
+0x00007ffe7e540000 - 0x00007ffe7e567000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffe7e880000 - 0x00007ffe7e8ab000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffe7e570000 - 0x00007ffe7e69b000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffe7dbc0000 - 0x00007ffe7dc63000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffe77000000 - 0x00007ffe7700b000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffe80260000 - 0x00007ffe80291000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffe73b70000 - 0x00007ffe73b7c000 	C:\Program Files\Java\jdk-17\bin\vcruntime140_1.dll
+0x00007ffe58930000 - 0x00007ffe589be000 	C:\Program Files\Java\jdk-17\bin\msvcp140.dll
+0x00007ffe01f30000 - 0x00007ffe02b10000 	C:\Program Files\Java\jdk-17\bin\server\jvm.dll
+0x00007ffe80490000 - 0x00007ffe80498000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffe76a50000 - 0x00007ffe76a85000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffe73600000 - 0x00007ffe7360a000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffe7e8b0000 - 0x00007ffe7e924000 	C:\WINDOWS\System32\ws2_32.DLL
+0x00007ffe7bf30000 - 0x00007ffe7bf4b000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffe6f5d0000 - 0x00007ffe6f5da000 	C:\Program Files\Java\jdk-17\bin\jimage.dll
+0x00007ffe719e0000 - 0x00007ffe71c22000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffe7eae0000 - 0x00007ffe7ee62000 	C:\WINDOWS\System32\combase.dll
+0x00007ffe80040000 - 0x00007ffe80117000 	C:\WINDOWS\System32\OLEAUT32.dll
+0x00007ffe63100000 - 0x00007ffe6313b000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffe7e490000 - 0x00007ffe7e535000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffe5f180000 - 0x00007ffe5f1a5000 	C:\Program Files\Java\jdk-17\bin\java.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Java\jdk-17\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.26100.8037_none_3e092faae333b53b;C:\Program Files\Java\jdk-17\bin\server
+
+VM Arguments:
+jvm_args: -Dorg.gradle.appname=gradlew 
+java_command: org.gradle.wrapper.GradleWrapperMain -q -Ptarget-platform=android-x64 -Ptarget=C:\version2-2\lib\main.dart -Pbase-application-name=android.app.Application -Pdart-defines=RkxVVFRFUl9WRVJTSU9OPTMuNDEuMQ==,RkxVVFRFUl9DSEFOTkVMPXN0YWJsZQ==,RkxVVFRFUl9HSVRfVVJMPWh0dHBzOi8vZ2l0aHViLmNvbS9mbHV0dGVyL2ZsdXR0ZXIuZ2l0,RkxVVFRFUl9GUkFNRVdPUktfUkVWSVNJT049NTgyYTBlN2M1NQ==,RkxVVFRFUl9FTkdJTkVfUkVWSVNJT049MzQ1MmQ3MzViZA==,RkxVVFRFUl9EQVJUX1ZFUlNJT049My4xMS4w -Pdart-obfuscation=false -Ptrack-widget-creation=true -Ptree-shake-icons=false -Pfilesystem-scheme=org-dartlang-root assembleDebug
+java_class_path (initial): C:\version2-2\android\\gradle\wrapper\gradle-wrapper.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 3                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 10                                        {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 2097152                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 257949696                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 4116709376                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 2097152                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5839372                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122909434                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122909434                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 4116709376                             {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                           {product lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk-17
+CLASSPATH=C:\version2-2\android\\gradle\wrapper\gradle-wrapper.jar
+PATH=C:\Program Files\Java\jdk-17\bin;C:\Users\HP EliteBook 845\AppData\Local\Programs\Microsoft VS Code;C:\Program Files\Java\jdk-17\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;c:\src\flutter\bin;C:\AndroidSDK\platform-tools;C:\AndroidSDK\emulator;C:\AndroidSDK\tools;C:\AndroidSDK\tools\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\HP EliteBook 845\AppData\Local\Programs\Eclipse Adoptium\jdk-17.0.16.8-hotspot\bin;C:\Users\HP EliteBook 845\AppData\Local\Programs\Eclipse Adoptium\jdk-25.0.1.8-hotspot\bin;C:\Users\HP EliteBook 845\AppData\Local\Programs\Eclipse Adoptium\jdk-21.0.7.6-hotspot\bin;C:\Users\HP EliteBook 845\AppData\Local\Microsoft\WindowsApps;C:\Users\HP EliteBook 845\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2025.1.1.1\bin;C:\mysql-connector-j-9.5.0.jar;c:\src\flutter\bin\mingit\cmd;c:\src\flutter\bin\mingit\cmd
+USERNAME=HP EliteBook 845
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 23 Model 96 Stepping 1, AuthenticAMD
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 11 , 64 bit Build 26100 (10.0.26100.7920)
+OS uptime: 10 days 21:50 hours
+Hyper-V role detected
+
+CPU: total 12 (initial active 12) (12 cores per cpu, 2 threads per core) family 23 model 96 stepping 1 microcode 0x860010c, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4a, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, clmul, bmi1, bmi2, adx, sha, fma, vzeroupper, clflush, clflushopt, hv
+
+Memory: 4k page, system-wide physical 15697M (1429M free)
+TotalPageFile size 46106M (AvailPageFile size 5M)
+current process WorkingSet (physical memory assigned to process): 12M, peak: 12M
+current process commit charge ("private bytes"): 64M, peak: 310M
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (17.0.12+8-LTS-286) for windows-amd64 JRE (17.0.12+8-LTS-286), built on Jun  5 2024 06:46:59 by "mach5one" with MS VC++ 17.6 (VS2022)
+
+END.

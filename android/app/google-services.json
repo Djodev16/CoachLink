@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1072436806943",
+    "project_id": "coachlink-6ba3f",
+    "storage_bucket": "coachlink-6ba3f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1072436806943:android:477b9e74c73e3491ec1c2a",
+        "android_client_info": {
+          "package_name": "com.example.gym"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4taRJUbpySojqsr9ZkPYZchipZ_NEgm0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
