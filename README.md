@@ -1,7 +1,7 @@
 # CoachLink 💪
 ### Connecting Coaches and Trainees
 
-**CoachLink** is a mobile application designed to connect fitness coaches with trainees and simplify fitness coaching management.
+**CoachLink** is a mobile application designed to connect  coaches with trainees and simplify fitness coaching management.
 
 ## 📱 About the Project
 
